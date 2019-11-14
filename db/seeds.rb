@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# require 'open-uri'
+# require 'json'
+
+# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+# user = open(url).read
+# result_api = JSON.parse(user)
+# # result_api.each {|ingredient| puts ingredient}
+
+Cocktail.destroy_all if Rails.env.development?
+
+
+# puts result_api["drinks"][0]["strIngredient1"]
+
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "rhum")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "lime")
+Ingredient.create(name: "ginger ale")
+Ingredient.create(name: "soda water")
+Ingredient.create(name: "simple sirup")
+Ingredient.create(name: "clamato")
+Ingredient.create(name: "valentina")
+Ingredient.create(name: "worchester sauce")
+Ingredient.create(name: "celery salt")
+
+
+Cocktail.create(name: "Bloody Caesar")
