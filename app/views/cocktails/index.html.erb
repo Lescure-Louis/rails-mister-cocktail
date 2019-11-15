@@ -25,9 +25,10 @@
             <div class="card-trip">
       <!--    #     <%  #if  !cocktail.photo.attached? %>
           #      <%= cl_image_tag(#"NuGMv9ifCf3djAn1rZYjZxxh.jpg") %> -->
-              <% else %>
+           <!--    <% #else %> -->
+           <% if  cocktail.photo.attached? %>
                <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-              <% end %>
+            <% end %>
               <div class="card-trip-infos">
                 <div>
                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
