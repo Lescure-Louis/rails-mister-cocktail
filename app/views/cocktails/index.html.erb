@@ -13,7 +13,6 @@
   <ul id="menu">
     <li><a> <%= link_to "Add a Cocktail",  new_cocktail_path %> </a></li>
   </ul>
-  <p></p>
 </div>
 
 <div class="container">
@@ -24,7 +23,11 @@
       <% @cocktails.each do |cocktail| %>
         <li>
             <div class="card-trip">
-              <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+              <%  if  !cocktail.photo.attached? %>
+                <%= cl_image_tag("NuGMv9ifCf3djAn1rZYjZxxh.jpg") %>
+              <% else %>
+               <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+              <% end %>
               <div class="card-trip-infos">
                 <div>
                   <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
