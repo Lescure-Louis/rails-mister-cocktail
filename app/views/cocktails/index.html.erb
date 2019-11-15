@@ -1,9 +1,18 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1425&q=80);">
   <div class="container">
     <h1> Name TBA</h1>
     <p> Create your <strong>own</strong> cocktail recipees and store then for later</p>
     <a class="btn btn-ghost">  <%= link_to "Add a Cocktail",  new_cocktail_path %></a>
   </div>
+</div> -->
+
+<div id="header">
+  <a href="/" id="logo">cocktailmaker</a>
+  <h4>Let the evening beGIN</h4>
+  <ul id="menu">
+    <li><a> <%= link_to "Add a Cocktail",  new_cocktail_path %> </a></li>
+  </ul>
 </div>
 
 <div class="container">
@@ -13,9 +22,11 @@
       <% @cocktails.each do |cocktail| %>
         <li>
           <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      <% end %>
         </li>
+      <% end %>
     </ul>
   </div>
 </div>
+
+
 
