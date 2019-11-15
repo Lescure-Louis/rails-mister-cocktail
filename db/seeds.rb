@@ -14,25 +14,43 @@
 # result_api = JSON.parse(user)
 # # result_api.each {|ingredient| puts ingredient}
 
+# Cocktail.destroy_all if Rails.env.development?
+
+
+# # puts result_api["drinks"][0]["strIngredient1"]
+
+
+# Ingredient.create(name: "lemon")
+# Ingredient.create(name: "ice")
+# Ingredient.create(name: "mint leaves")
+# Ingredient.create(name: "rhum")
+# Ingredient.create(name: "vodka")
+# Ingredient.create(name: "lime")
+# Ingredient.create(name: "ginger ale")
+# Ingredient.create(name: "soda water")
+# Ingredient.create(name: "simple sirup")
+# Ingredient.create(name: "clamato")
+# Ingredient.create(name: "valentina")
+# Ingredient.create(name: "worchester sauce")
+# Ingredient.create(name: "celery salt")
+
+
+# Cocktail.create(name: "Bloody Caesar")
+
+require 'open-uri'
+
+
+puts "Destroy Cocktails"
 Cocktail.destroy_all if Rails.env.development?
 
-
-# puts result_api["drinks"][0]["strIngredient1"]
-
-
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "rhum")
-Ingredient.create(name: "vodka")
-Ingredient.create(name: "lime")
-Ingredient.create(name: "ginger ale")
-Ingredient.create(name: "soda water")
-Ingredient.create(name: "simple sirup")
-Ingredient.create(name: "clamato")
-Ingredient.create(name: "valentina")
-Ingredient.create(name: "worchester sauce")
-Ingredient.create(name: "celery salt")
+puts "Destroy ingredients"
+Ingredient.destroy_all if Rails.env.development?
 
 
-Cocktail.create(name: "Bloody Caesar")
+puts "Create ingredients"
+url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+ingredients = JSON.parse(open(url).read)
+ingredients["drinks"].each do |ingredient|
+  i = Ingredient.create(name: ingredient["strIngredient1"])
+  puts "create #{i.name}"
+end
