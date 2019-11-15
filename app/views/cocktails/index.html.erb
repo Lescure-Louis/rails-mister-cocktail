@@ -19,9 +19,9 @@
   <h1 class="mt-3">Cocktails</h1>
   <div class="row">
     <ul>
+      <div class="cards">
       <% @cocktails.each do |cocktail| %>
         <li>
-          <div class="cards">
             <div class="card-trip">
               <%= image_tag  cocktail.image_url %>
               <div class="card-trip-infos">
@@ -30,9 +30,9 @@
                  </div>
               </div>
             </div>
-          </div>
         </li>
       <% end %>
+    </div>
     </ul>
   </div>
 </div>
