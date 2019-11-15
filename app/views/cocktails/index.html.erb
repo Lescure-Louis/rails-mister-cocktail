@@ -21,7 +21,16 @@
     <ul>
       <% @cocktails.each do |cocktail| %>
         <li>
-          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          <div class="cards">
+            <div class="card-trip">
+              <%= image_tag  cocktail.image_url %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+                 </div>
+              </div>
+            </div>
+          </div>
         </li>
       <% end %>
     </ul>
