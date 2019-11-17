@@ -134,9 +134,19 @@ h4{
 #logo {
   font-size: 50px;
 }
-body h4 {
-font-size: 20px;
 
+h1 h4 {
+font-size: 16px;
+
+}
+
+#menu li a {
+font-size: 20px;
+  }
+
+#logo:after {
+  left: 5px;
+  top: 13px;
 }
 
 }
@@ -146,26 +156,27 @@ font-size: 20px;
 #logo {
   font-size: 90px;
 }
+
+
+h1 h4 {
+font-size: 32px;
+
+}
+
+#menu li a {
+font-size: 25px;
+  }
+
+#logo:after {
+  left: 6px;
+  top: 18px;
+}
+
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   #logo {
-    font-size: 110px;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-   #logo {
-     font-size: 130px;
-   }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  #logo {
     font-size: 150px;
   }
 }
-
