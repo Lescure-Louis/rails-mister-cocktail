@@ -1,9 +1,21 @@
 // Import Google fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
+$body-font: 'Squada One', cursive;
 $headers-font: "Raleway", "Helvetica", "sans-serif";
+
+body {
+  padding: 20px 80px;
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+  padding: 2px 10px;
+  font-size: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #FFF, 2px 2px 0px #999, 3px 3px 0px #FFF;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

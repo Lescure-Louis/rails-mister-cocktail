@@ -1,12 +1,4 @@
 
-<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1425&q=80);">
-  <div class="container">
-    <h1> Name TBA</h1>
-    <p> Create your <strong>own</strong> cocktail recipees and store then for later</p>
-    <a class="btn btn-ghost">  <%= link_to "Add a Cocktail",  new_cocktail_path %></a>
-  </div>
-</div> -->
-
 <div id="header">
   <a href="/" id="logo">aperotime</a>
   <h4>Let the evening beGIN</h4>
@@ -19,7 +11,7 @@
 <div class="container">
   <h1 class="mt-3">Cocktails</h1>
   <div class="row">
-    <ul>
+    <ul class="pl-0">
       <div class="cards">
       <% @cocktails.each do |cocktail| %>
         <li>
